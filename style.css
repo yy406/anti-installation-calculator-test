@@ -1,0 +1,35 @@
+/* タブのスタイル */
+.tab {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* タブのボタン */
+.tab button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* タブを選択中のスタイル */
+.tab button.active {
+    background-color: #666;
+    color: white;
+}
+
+/* タブの内容を隠す */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+/* 選択したタブの内容を表示 */
+.tabcontent.active {
+    display: block;
+}
