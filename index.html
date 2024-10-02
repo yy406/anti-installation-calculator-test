@@ -1,16 +1,52 @@
-<!DOCTYPE html> <!--文書型の定義-->
-<html> <!--はじまり-->
-    <head> <!--文書のヘッダ部分-->
-        <meta charset='utf-8'> <!--文字コードの指定-->
-        <link rel='shortcut icon' href='favicon.ico'> <!--タブに表示されるアイコンの設定-->
-        <meta name='description' content='htmlのお勉強中'> <!--検索エンジンに使われたり、検索結果に表示される説明文-->
-        <title>anti-installation-calculator-test@yy406</title> <!--ページのタイトル-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset='utf-8'>
+        <link rel='shortcut icon' href='favicon.ico'>
+        <meta name='description' content='htmlのお勉強中'>
+        <title>anti-installation-calculator-test@yy406</title>
+        <!-- CSSファイルのリンク -->
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body> <!--文書の本体部分-->
-        <h1>見出し1</h1>
-        <h2>見出し2</h2>
-        <h3>見出し3</h3>
-        <h4>見出し4</h4>
-        <p>test_01</p>
+    <body>
+        <h1>計算機</h1>
+
+        <!-- タブメニュー -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tab1')">タブ1</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')">タブ2</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">タブ3</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab4')">タブ4</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab5')">タブ5</button>
+        </div>
+
+        <!-- 各タブの内容 -->
+        <div id="Tab1" class="tabcontent">
+            <h2>タブ1の内容</h2>
+            <p>ここにタブ1のコンテンツを表示します。</p>
+        </div>
+
+        <div id="Tab2" class="tabcontent">
+            <h2>タブ2の内容</h2>
+            <p>ここにタブ2のコンテンツを表示します。</p>
+        </div>
+
+        <div id="Tab3" class="tabcontent">
+            <h2>タブ3の内容</h2>
+            <p>ここにタブ3のコンテンツを表示します。</p>
+        </div>
+
+        <div id="Tab4" class="tabcontent">
+            <h2>タブ4の内容</h2>
+            <p>ここにタブ4のコンテンツを表示します。</p>
+        </div>
+
+        <div id="Tab5" class="tabcontent">
+            <h2>タブ5の内容</h2>
+            <p>ここにタブ5のコンテンツを表示します。</p>
+        </div>
+
+        <!-- JavaScriptをリンク -->
+        <script src="script.js"></script>
     </body>
 </html>
