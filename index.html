@@ -15,35 +15,41 @@
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Tab1')">計算機</button>
             <button class="tablinks" onclick="openTab(event, 'Tab2')">対地装備リスト</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab3')">装備DB</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">補正値</button>
             <button class="tablinks" onclick="openTab(event, 'Tab4')">艦船DB</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab5')">敵艦DB</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab5')">装備DB</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab6')">敵艦DB</button>
         </div>
 
         <!-- 各タブの内容 -->
         <div id="Tab1" class="tabcontent">
             <h2>計算機</h2>
-            <p>ここにタブ1のコンテンツを表示します。</p>
+            <p>対地装備リスト以外の計算条件の入力と結果の表示。条件（昼/夜、、、、）。</p>
         </div>
 
         <div id="Tab2" class="tabcontent">
             <h2>対地装備リスト</h2>
-            <p>ここにタブ2のコンテンツを表示します。</p>
+            <p>対地装備の計算条件（装備名、★、min、max）の入力。行の追加と編集機能、コードからの入力機能が必要。</p>
         </div>
 
         <div id="Tab3" class="tabcontent">
-            <h2>装備DB</h2>
-            <p>ここにタブ3のコンテンツを表示します。</p>
+            <h2>対地補正値、青字ボーナス</h2>
+            <p>補正値の演算条件表。行の追加と編集機能が必要。ただのコードの説明だけになるかも？</p>
         </div>
 
         <div id="Tab4" class="tabcontent">
             <h2>艦船DB</h2>
-            <p>ここにタブ4のコンテンツを表示します。</p>
+            <p>艦船ID、艦名、艦種、艦型、読み、スロット数、火力。編集機能あり。</p>
         </div>
 
         <div id="Tab5" class="tabcontent">
+            <h2>装備DB</h2>
+            <p>装備ID、装備名、改修効果の乗り方（昼/夜）、火力、。</p>
+        </div>
+
+        <div id="Tab6" class="tabcontent">
             <h2>敵艦DB</h2>
-            <p>ここにタブ5のコンテンツを表示します。</p>
+            <p>タイプ、艦船ID、艦名、装甲、耐久、、、。</p>
         </div>
 
         <!-- JavaScriptをリンク -->
