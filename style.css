@@ -33,3 +33,32 @@
 .tabcontent.active {
     display: block;
 }
+
+/* 表全体のスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 表の交互背景色 */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* 表のヘッダーのスタイル */
+table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+}
+
+/* 表のセルのスタイル */
+table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
