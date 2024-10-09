@@ -38,6 +38,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* 列幅を均等にする */
 }
 
 /* 表の交互背景色 */
@@ -54,6 +55,9 @@ table th {
     background-color: #4CAF50;
     color: white;
     padding: 8px;
+    position: sticky;  /* ヘッダーを固定 */
+    top: 0;  /* 上に固定 */
+    z-index: 1;  /* 他の内容よりも上に表示 */
 }
 
 /* 表のセルのスタイル */
