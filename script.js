@@ -21,3 +21,15 @@ function openTab(evt, tabName) {
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tablinks").click();
 });
+
+// JSONデータを処理する関数
+function processJson() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    try {
+        const jsonData = JSON.parse(jsonInput);  // JSONとしてパース
+        console.log("入力されたJSON:", jsonData);  // JSONデータをコンソールに表示（後で処理を追加）
+        alert("データが正常に処理されました");
+    } catch (error) {
+        alert("JSONの形式が正しくありません。エラー: " + error.message);
+    }
+}
