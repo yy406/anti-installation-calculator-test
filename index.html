@@ -27,6 +27,12 @@
         <div id="Tab2" class="tabcontent">
             <h2>対地装備リスト</h2>
             <p>対地装備の計算条件（装備名、★、min、max）の入力。行の追加と編集機能、コードからの入力機能が必要。</p>
+            
+            <!-- JSON形式入力用のテキストボックスを追加 -->
+            <label for="jsonInput">JSON形式のデータを入力してください:</label>
+            <textarea id="jsonInput" rows="10" cols="50" placeholder='{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}'></textarea>
+            
+            <button onclick="processJson()">データを処理する</button>
         </div>
 
         <div id="Tab3" class="tabcontent">
