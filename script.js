@@ -33,3 +33,36 @@ function processJson() {
         alert("JSONの形式が正しくありません。エラー: " + error.message);
     }
 }
+
+// JSONデータを処理して表を生成する関数
+function processJson() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    let jsonData;
+
+    try {
+        // JSON文字列をオブジェクトに変換
+        jsonData = JSON.parse(jsonInput);
+    } catch (error) {
+        alert("JSONの形式が正しくありません。エラー: " + error.message);
+        return;
+    }
+
+    // api_slotitem_idが200以下のデータだけをフィルタリング
+    const filteredData = jsonData.filter(item => item.api_slotitem_id <= 200);
+
+    // 表の生成
+    let table = "<table><tr><th>SlotItem ID</th><th>Level</th></tr>";
+
+    // フィルタリングされたデータから表の行を生成
+    filteredData.forEach((item) => {
+        table += "<tr>";
+        table += `<td>${item.api_slotitem_id}</td>`;
+        table += `<td>${item.api_level}</td>`;
+        table += "</tr>";
+    });
+
+    table += "</table>";
+
+    // 表を表示するdivに挿入
+    document.getElementById('outputTable').innerHTML = table;
+}
