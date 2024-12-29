@@ -11,21 +11,25 @@
         <h1>対地補正計算機</h1>
 
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Tab1')">計算機</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab2')">対地装備リスト</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab3')">補正値</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab4')">艦船DB</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab5')">装備DB</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab6')">敵艦DB</button>
+            <div class="tab-row">
+                <button class="tablinks" onclick="openTab(event, 'Tab1')">計算機</button>
+                <button class="tablinks" onclick="openTab(event, 'Tab2')">保有装備</button>
+            </div>
+            <div class="tab-row small-buttons">
+                <button class="tablinks" onclick="openTab(event, 'Tab3')">補正値</button>
+                <button class="tablinks" onclick="openTab(event, 'Tab4')">艦船DB</button>
+                <button class="tablinks" onclick="openTab(event, 'Tab5')">装備DB</button>
+                <button class="tablinks" onclick="openTab(event, 'Tab6')">敵艦DB</button>
+            </div>
         </div>
-
+        
         <div id="Tab1" class="tabcontent">
             <h2>計算機</h2>
             <p>対地装備リスト以外の計算条件の入力と結果の表示。条件（昼/夜、、、、）。</p>
         </div>
         
         <div id="Tab2" class="tabcontent">
-            <h2>対地装備リスト</h2>
+            <h2>保有装備</h2>
             <p>対地装備の計算条件（装備名、★、min、max）の入力。行の追加と編集機能、コードからの入力機能が必要。</p>
             
             <!-- JSON形式入力用のテキストボックス -->

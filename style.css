@@ -1,9 +1,16 @@
 /* タブのスタイル */
 .tab {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     background-color: #f1f1f1;
     padding: 10px;
+}
+
+/* タブの行 */
+.tab-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 /* タブのボタン */
