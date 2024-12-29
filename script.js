@@ -56,8 +56,8 @@ function processJson() {
     // フィルタリングされたデータから表の行を生成
     filteredData.forEach((item) => {
         table += "<tr>";
-        table += `<td>${item.api_slotitem_id}</td>`;
-        table += `<td>${item.api_level}</td>`;
+        table += `<td contenteditable="true">${item.api_slotitem_id}</td>`;
+        table += `<td contenteditable="true">${item.api_level}</td>`;
         table += "</tr>";
     });
 
@@ -69,22 +69,22 @@ function processJson() {
 
 // 表をJSON形式でクリップボードにコピーする関数
 function copyTableToJson() {
-    const jsonInput = document.getElementById('jsonInput').value;
-    let jsonData;
+    const table = document.querySelector('#outputTable table');
+    const rows = table.querySelectorAll('tr');
+    const data = [];
 
-    try {
-        // JSON文字列をオブジェクトに変換
-        jsonData = JSON.parse(jsonInput);
-    } catch (error) {
-        alert("JSONの形式が正しくありません。エラー: " + error.message);
-        return;
-    }
-
-    // api_slotitem_idが200以下のデータだけをフィルタリング
-    const filteredData = jsonData.filter(item => item.api_slotitem_id <= 200);
+    rows.forEach((row, index) => {
+        if (index === 0) return; // ヘッダー行をスキップ
+        const cells = row.querySelectorAll('td');
+        const rowData = {
+            api_slotitem_id: cells[0].textContent,
+            api_level: cells[1].textContent
+        };
+        data.push(rowData);
+    });
 
     // JSON形式の文字列に変換
-    const jsonString = JSON.stringify(filteredData, null, 2);
+    const jsonString = JSON.stringify(data, null, 2);
 
     // クリップボードにコピー
     navigator.clipboard.writeText(jsonString).then(() => {
