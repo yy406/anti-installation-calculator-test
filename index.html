@@ -55,7 +55,17 @@
 
         <div id="Tab6" class="tabcontent">
             <h2>敵艦DB</h2>
-            <p>タイプ、艦船ID、艦名、装甲、耐久、、、。</p>
+            <p>艦船ID、艦種、艦名、耐久、装甲、速力、種別、URL(JP)、URL(EN)、URL(ZH)</p>
+            <p>編集機能、json出力機能、json入力機能、デフォルトに戻す機能</p>
+            
+            <!-- JSON形式入力用のテキストボックス -->
+            <label for="jsonInputTab6">JSON形式のデータを入力してください:</label>
+            <textarea id="jsonInputTab6" rows="10" cols="50" placeholder='{"shipId": "艦船ID", "shipType": "艦種", "shipName": "艦名", "durability": "耐久", "armor": "装甲", "speed": "速力", "category": "種別", "urlJP": "URL(JP)", "urlEN": "URL(EN)", "urlZH": "URL(ZH)"}'></textarea>
+            
+            <button onclick="processJsonTab6()">データを処理する</button>
+            
+            <!-- 生成された表を挿入するための場所 -->
+            <div id="outputTableTab6"></div>
         </div>
 
         <!-- JavaScriptをリンク -->
