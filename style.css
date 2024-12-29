@@ -80,3 +80,8 @@ table td {
     text-align: left;
     border: 1px solid #ddd;
 }
+
+/* 入力ボックスのラベルとテキストエリアを上揃えにする */
+label, textarea {
+    vertical-align: top;
+}
