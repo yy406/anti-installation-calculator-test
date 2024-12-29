@@ -83,9 +83,30 @@
         <script>
             // デフォルトデータを設定
             document.addEventListener('DOMContentLoaded', (event) => {
-                document.getElementById('jsonInput').value = '{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}';
-                document.getElementById('jsonInputAuto').value = '{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}';
+                const defaultData = '{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}';
+                document.getElementById('jsonInput').value = defaultData;
+                document.getElementById('jsonInputAuto').value = defaultData;
+                processJson(); // デフォルトデータで表を生成
             });
+
+            function processJson() {
+                const jsonInput = document.getElementById('jsonInput').value;
+                const data = JSON.parse(jsonInput);
+                const table = document.createElement('table');
+                const headerRow = table.insertRow();
+                Object.keys(data).forEach(key => {
+                    const cell = headerRow.insertCell();
+                    cell.textContent = key;
+                });
+                const dataRow = table.insertRow();
+                Object.values(data).forEach(value => {
+                    const cell = dataRow.insertCell();
+                    cell.textContent = value;
+                });
+                const outputTable = document.getElementById('outputTable');
+                outputTable.innerHTML = ''; // 既存の表をクリア
+                outputTable.appendChild(table);
+            }
         </script>
     </body>
 </html>
