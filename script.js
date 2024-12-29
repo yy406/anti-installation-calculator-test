@@ -66,3 +66,30 @@ function processJson() {
     // 表を表示するdivに挿入
     document.getElementById('outputTable').innerHTML = table;
 }
+
+// 表をJSON形式でクリップボードにコピーする関数
+function copyTableToJson() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    let jsonData;
+
+    try {
+        // JSON文字列をオブジェクトに変換
+        jsonData = JSON.parse(jsonInput);
+    } catch (error) {
+        alert("JSONの形式が正しくありません。エラー: " + error.message);
+        return;
+    }
+
+    // api_slotitem_idが200以下のデータだけをフィルタリング
+    const filteredData = jsonData.filter(item => item.api_slotitem_id <= 200);
+
+    // JSON形式の文字列に変換
+    const jsonString = JSON.stringify(filteredData, null, 2);
+
+    // クリップボードにコピー
+    navigator.clipboard.writeText(jsonString).then(() => {
+        alert("表をJSON形式でクリップボードにコピーしました。");
+    }).catch(err => {
+        alert("クリップボードへのコピーに失敗しました。エラー: " + err);
+    });
+}

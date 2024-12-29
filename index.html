@@ -44,6 +44,9 @@
             <textarea id="jsonInputAuto" rows="1" cols="50" placeholder='{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}'></textarea>
             <button onclick="processJsonAuto()">データを処理する</button>
             
+            <!-- 表をJSON形式でクリップボードにコピーするボタン -->
+            <button onclick="copyTableToJson()">表をJSON形式でコピー</button>
+            
             <!-- 生成された表を挿入するための場所 -->
             <div id="outputTable"></div>
         </div>
