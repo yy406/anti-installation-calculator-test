@@ -80,5 +80,12 @@
 
         <!-- JavaScriptをリンク -->
         <script src="script.js"></script>
+        <script>
+            // デフォルトデータを設定
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.getElementById('jsonInput').value = '{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}';
+                document.getElementById('jsonInputAuto').value = '{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}';
+            });
+        </script>
     </body>
 </html>
