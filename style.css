@@ -9,7 +9,7 @@
 /* タブの行 */
 .tab-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start; /* 左揃えに変更 */
     margin-bottom: 10px;
 }
 
@@ -20,6 +20,13 @@
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 5px; /* ボタン間のスペースを追加 */
+}
+
+/* 小さいボタン */
+.tab-row.small-buttons button {
+    padding: 5px 10px;
+    font-size: 14px;
 }
 
 /* タブを選択中のスタイル */

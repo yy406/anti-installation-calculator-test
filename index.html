@@ -22,7 +22,7 @@
                 <button class="tablinks" onclick="openTab(event, 'Tab6')">敵艦DB</button>
             </div>
         </div>
-        
+
         <div id="Tab1" class="tabcontent">
             <h2>計算機</h2>
             <p>対地装備リスト以外の計算条件の入力と結果の表示。条件（昼/夜、、、、）。</p>
@@ -33,10 +33,16 @@
             <p>対地装備の計算条件（装備名、★、min、max）の入力。行の追加と編集機能、コードからの入力機能が必要。</p>
             
             <!-- JSON形式入力用のテキストボックス -->
-            <label for="jsonInput">JSON形式のデータを入力してください:</label>
+            <label for="jsonInput">対地装備コードの入力用:</label>
             <textarea id="jsonInput" rows="10" cols="50" placeholder='{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}'></textarea>
             
             <button onclick="processJson()">データを処理する</button>
+            
+            <!-- 新しいJSON形式入力用のテキストボックス -->
+            <label for="jsonInputAuto">制空シミュコードから自動入力用:</label>
+            <textarea id="jsonInputAuto" rows="10" cols="50" placeholder='{"equipName": "装備名", "level": "★", "min": "min", "max": "max"}'></textarea>
+            
+            <button onclick="processJsonAuto()">データを処理する</button>
             
             <!-- 生成された表を挿入するための場所 -->
             <div id="outputTable"></div>
